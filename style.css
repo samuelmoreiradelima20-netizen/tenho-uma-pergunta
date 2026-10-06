@@ -1,0 +1,416 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe6ec, #fff6f8);
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+section {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 25px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+button {
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+#sim {
+  background-color: #ff4f81;
+  color: white;
+}
+
+#nao {
+  color: #555;
+  background: hsla(0, 37%, 86%, 0.902);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+  max-width: calc(100vw - 40px);
+  white-space: normal;
+}
+
+
+.coracao {
+  position: fixed;
+  bottom: -30px;
+  font-size: 24px;
+  animation: subir 3s linear forwards;
+  z-index: 9999;
+pointer-events: none;
+}
+
+@keyframes subir {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+
+.modo-triste {
+  background: linear-gradient(135deg, #555, #222);
+  transition: background 1s ease;
+}
+
+.card-triste {
+  animation: entradaTriste 1.2s ease forwards;
+}
+
+.coracao-partido {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.drama {
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+@keyframes entradaTriste {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.coracao-triste {
+  position: fixed;
+  top: -40px;
+  font-size: 40px;
+  animation: cair 5s linear forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes cair {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100vh) rotate(300deg);
+    opacity: 0;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.6), transparent 25%),
+    radial-gradient(circle at 85% 80%, rgba(255, 105, 180, 0.25), transparent 30%),
+    linear-gradient(
+      135deg,
+      #ffb6cf,
+      #ff8fb5,
+      #d98cff,
+      #ff9dbb
+    );
+
+  background-size: 200% 200%;
+  animation: moverFundo 8s ease infinite;
+}
+
+.modo-triste {
+  background: linear-gradient(135deg, #555, #222);
+  transition: background 1s ease;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  width: min(90%, 500px);
+  margin: 0 auto;
+  padding: 45px 30px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 50px rgba(80, 0, 40, 0.2),
+    0 0 40px rgba(255, 255, 255, 0.25);
+
+  animation: aparecerCard 0.8s ease;
+}
+
+#mensagem {
+  margin: 0 0 10px;
+  color: #8c5268;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+
+h1 {
+  margin: 5px 0 10px;
+
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.1;
+
+  color: #d6336c;
+}
+
+.subtitulo {
+  margin: 15px auto 25px;
+  max-width: 360px;
+
+  color: #765462;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+  flex-wrap: wrap;
+
+  margin-top: 25px;
+}
+
+button {
+  min-width: 120px;
+
+  padding: 14px 26px;
+
+  border: none;
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#sim {
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #ff3366,
+    #ff5e91
+  );
+
+  box-shadow:
+    0 8px 22px rgba(255, 51, 102, 0.35),
+    0 0 18px rgba(255, 80, 130, 0.25);
+
+  animation: pulsar 1.7s infinite;
+}
+
+#sim:hover {
+  transform: scale(1.1);
+
+  box-shadow:
+    0 10px 28px rgba(255, 51, 102, 0.5),
+    0 0 25px rgba(255, 80, 130, 0.5);
+}
+
+#nao {
+  color: #555;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+  white-space: nowrap;
+}
+
+.decoracao {
+  position: fixed;
+  inset: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.emoji {
+  position: absolute;
+
+  opacity: 0.75;
+
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+
+  animation: flutuar 5s ease-in-out infinite;
+}
+
+.e1 {
+  top: 8%;
+  left: 8%;
+  font-size: 2.7rem;
+}
+
+.e2 {
+  top: 14%;
+  right: 10%;
+  font-size: 2.5rem;
+  animation-delay: 0.5s;
+}
+
+.e3 {
+  bottom: 12%;
+  left: 10%;
+  font-size: 2.8rem;
+  animation-delay: 1s;
+}
+
+.e4 {
+  bottom: 15%;
+  right: 12%;
+  font-size: 2.4rem;
+  animation-delay: 1.5s;
+}
+
+.e5 {
+  top: 50%;
+  left: 4%;
+  font-size: 2rem;
+  animation-delay: 0.8s;
+}
+
+.e6 {
+  top: 55%;
+  right: 5%;
+  font-size: 2.2rem;
+  animation-delay: 1.8s;
+}
+
+.e7 {
+  top: 30%;
+  left: 18%;
+  font-size: 1.9rem;
+  animation-delay: 1.2s;
+}
+
+.e8 {
+  bottom: 30%;
+  right: 18%;
+  font-size: 2rem;
+  animation-delay: 2s;
+}
+
+@keyframes moverFundo {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes aparecerCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulsar {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 35px 20px;
+  }
+
+  .emoji {
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 13px 20px;
+  }
+}
